@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Хранилище ZPPrakticaModelContainer" CdmEntityContainer="ZPPrakticaEntities">
+    <EntitySetMapping Name="PointStaff">
+      <EntityTypeMapping TypeName="ZPPrakticaModel.PointStaff">
+        <MappingFragment StoreEntitySet="PointStaff">
+          <ScalarProperty Name="IDPoint" ColumnName="IDPoint" />
+          <ScalarProperty Name="idStaff" ColumnName="idStaff" />
+          <ScalarProperty Name="idTypePoint" ColumnName="idTypePoint" />
+          <ScalarProperty Name="SummaPoint" ColumnName="SummaPoint" />
+          <ScalarProperty Name="idUserSystem" ColumnName="idUserSystem" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Staff">
+      <EntityTypeMapping TypeName="ZPPrakticaModel.Staff">
+        <MappingFragment StoreEntitySet="Staff">
+          <ScalarProperty Name="IDStaff" ColumnName="IDStaff" />
+          <ScalarProperty Name="NameStaff" ColumnName="NameStaff" />
+          <ScalarProperty Name="SurnameStaff" ColumnName="SurnameStaff" />
+          <ScalarProperty Name="CardNumber" ColumnName="CardNumber" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="ZPPrakticaModel.sysdiagrams">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TypePoint">
+      <EntityTypeMapping TypeName="ZPPrakticaModel.TypePoint">
+        <MappingFragment StoreEntitySet="TypePoint">
+          <ScalarProperty Name="IDTypePoint" ColumnName="IDTypePoint" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserSystem">
+      <EntityTypeMapping TypeName="ZPPrakticaModel.UserSystem">
+        <MappingFragment StoreEntitySet="UserSystem">
+          <ScalarProperty Name="IDUser" ColumnName="IDUser" />
+          <ScalarProperty Name="NameUser" ColumnName="NameUser" />
+          <ScalarProperty Name="SurnameUser" ColumnName="SurnameUser" />
+          <ScalarProperty Name="Login" ColumnName="Login" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

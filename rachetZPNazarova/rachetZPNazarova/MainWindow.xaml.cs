@@ -24,5 +24,27 @@ namespace rachetZPNazarova
         {
             InitializeComponent();
         }
+
+        private void btn_EnterToSystem_Click(object sender, RoutedEventArgs e)
+        {
+            ZPPrakticaEntities zp = new ZPPrakticaEntities();
+            var user = zp.UserSystem.Where(w=>w.Login == tbLogin.Text && w.Password == tbPassword.Text).FirstOrDefault();
+            if (user == null)
+            {
+                MessageBox.Show("Что-то введено неверно");
+            }
+            else
+            {
+                MessageBox.Show("Вы авторизованы");
+            }
+        }
+
+        private void btn_Registration_Click(object sender, RoutedEventArgs e)
+        {
+            Registration registration = new Registration();
+            this.Close();
+            registration.Show();
+            return;
+        }
     }
 }

@@ -5,8 +5,47 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:rachetZPNazarova"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Вход в систему" Height="500" Width="500">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0" Grid.ColumnSpan="2">
+            <Image Source="Resourse/fon.png" Stretch="UniformToFill"></Image>
+        </Grid>
+        <TextBlock Text="Введите логин" Grid.Row="1" Grid.ColumnSpan="2" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+        <TextBox FontSize="20" x:Name="tbLogin" Grid.Row="2" Grid.ColumnSpan="2" Width="300" Height="40"></TextBox>
+        <TextBlock Text="Введите пароль" Grid.Row="3" Grid.ColumnSpan="2" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+        <TextBox FontSize="20" x:Name="tbPassword" Grid.Row="4" Grid.ColumnSpan="2" Width="300" Height="40"></TextBox>
+        <Button Click="btn_EnterToSystem_Click" Background="LightGray" Grid.Row="5" Grid.ColumnSpan="2" Content="Войти" Foreground="Black" FontWeight="Bold" FontSize="20" Width="120" Height="40">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="10"></Setter>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <TextBlock Grid.Row="6" Grid.ColumnSpan="2" HorizontalAlignment="Center" FontSize="20" VerticalAlignment="Center" Text="или"></TextBlock>
+        <Button Click="btn_Registration_Click" Background="Green" Grid.Row="7" Grid.ColumnSpan="2" Content="Зарегистрироваться" Foreground="White" FontWeight="Bold" FontSize="20" Width="220" Height="40" HorizontalAlignment="Center">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="10"></Setter>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <Grid Grid.Row="8" Grid.ColumnSpan="2">
+            <Image Source="Resourse/fon.png" Stretch="UniformToFill"></Image>
+        </Grid>
     </Grid>
 </Window>
