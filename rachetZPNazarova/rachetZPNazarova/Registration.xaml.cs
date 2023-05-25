@@ -23,5 +23,21 @@ namespace rachetZPNazarova
         {
             InitializeComponent();
         }
+
+        private void btn_Registration_Click(object sender, RoutedEventArgs e)
+        {
+            if (tbPassword.Text == tbReturnPassword.Text)
+            {
+                ZPPrakticaEntities zP = new ZPPrakticaEntities();
+                UserSystem userSystem = new UserSystem { NameUser = tbName.Text, SurnameUser = tbSurname.Text, Login = tbLogin.Text, Password = tbPassword.Text};
+                _ = zP.UserSystem.Add(userSystem);
+                _ = zP.SaveChanges();
+                MessageBox.Show("Вы зарегистрированы");
+            }
+            else
+            {
+                MessageBox.Show("Проверьте пароль");
+            }
+        }
     }
 }

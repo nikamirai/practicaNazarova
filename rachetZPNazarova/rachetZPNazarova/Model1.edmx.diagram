@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="9df33883519e4b9e91a6fd6d6c308a15" Name="Diagram1">
+        <EntityTypeShape EntityType="ZPPrakticaModel.PointStaff" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="ZPPrakticaModel.Staff" Width="1.5" PointX="0.75" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ZPPrakticaModel.sysdiagrams" Width="1.5" PointX="2.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ZPPrakticaModel.TypePoint" Width="1.5" PointX="0.75" PointY="4.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ZPPrakticaModel.UserSystem" Width="1.5" PointX="0.75" PointY="6.875" IsExpanded="true" />
+        <AssociationConnector Association="ZPPrakticaModel.FK_PointStaff_Staff" ManuallyRouted="false" />
+        <AssociationConnector Association="ZPPrakticaModel.FK_PointStaff_TypePoint" ManuallyRouted="false" />
+        <AssociationConnector Association="ZPPrakticaModel.FK_PointStaff_UserSystem" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
