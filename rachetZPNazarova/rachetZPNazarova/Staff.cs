@@ -21,9 +21,9 @@ namespace rachetZPNazarova
         }
     
         public int IDStaff { get; set; }
-        public string NameStaff { get; set; }
         public string SurnameStaff { get; set; }
-        public Nullable<int> CardNumber { get; set; }
+        public string NameStaff { get; set; }
+        public string CardNumber { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<PointStaff> PointStaff { get; set; }

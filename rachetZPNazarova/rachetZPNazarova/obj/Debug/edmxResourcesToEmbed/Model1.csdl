@@ -18,9 +18,9 @@
       <PropertyRef Name="IDStaff" />
     </Key>
     <Property Name="IDStaff" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="NameStaff" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="SurnameStaff" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="CardNumber" Type="Int32" />
+    <Property Name="NameStaff" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CardNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <NavigationProperty Name="PointStaff" Relationship="Self.FK_PointStaff_Staff" FromRole="Staff" ToRole="PointStaff" />
   </EntityType>
   <EntityType Name="sysdiagrams">

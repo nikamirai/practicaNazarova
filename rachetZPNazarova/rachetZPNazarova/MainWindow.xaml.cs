@@ -36,6 +36,9 @@ namespace rachetZPNazarova
             else
             {
                 MessageBox.Show("Вы авторизованы");
+                Bukxalter bukxalter = new Bukxalter();
+                bukxalter.Show();
+                return;
             }
         }
 

@@ -5,8 +5,107 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:rachetZPNazarova"
         mc:Ignorable="d"
-        Title="Страница бухгалтера" Height="450" Width="800">
+        Title="Страница бухгалтера" Height="550" Width="800">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <StackPanel>
+            <TextBlock></TextBlock>
+            <TextBlock Text="Выберите сотрудника" FontSize="20" TextAlignment="Center"></TextBlock>
+            <TextBlock></TextBlock>
+            <ComboBox Height="50" Width="350" DisplayMemberPath="SurnameStaff" x:Name="cb"></ComboBox>
+            <TextBlock></TextBlock>
+            <TextBlock Text="Выберите форму оплаты" FontSize="20" TextAlignment="Center"></TextBlock>
+            <TextBlock/>
+            <ComboBox Height="50" Width="350" DisplayMemberPath="Description" x:Name="cbForma"></ComboBox>
+            <TextBlock></TextBlock>
+            <Button Background="Green" Foreground="White" FontWeight="Bold" Content="Расчет" FontSize="20" Width="350" Height="50" Click="bth_Ras">
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="10"></Setter>
+                    </Style>
+                </Button.Resources>
+            </Button>
+        </StackPanel>
+        <StackPanel x:Name="sdelRaschenka" Grid.Column="1" Visibility="Hidden">
+            <TextBlock/>
+                <TextBlock Text="Сдельная расценка" FontSize="20" TextAlignment="Center"></TextBlock>
+                <TextBlock/>
+                <TextBox x:Name="sdelnayaRaschenka" Width="350" Height="50"></TextBox>
+                <TextBlock/>
+                <TextBlock Text="Изготовлено за месяц" FontSize="20" TextAlignment="Center"></TextBlock>
+                <TextBlock/>
+                <TextBox x:Name="all_za_Month" Width="350" Height="50"></TextBox>
+                <TextBlock/>
+                <TextBlock Text="Премия" FontSize="20" TextAlignment="Center"></TextBlock>
+                <TextBlock/>
+                <TextBox x:Name="premia" Width="350" Height="50"></TextBox>
+                <TextBlock/>
+                <Button FontWeight="Bold" Click="btn_SdelnoPremial_Click" Content="Рассчитать з/п" Background="Green" Foreground="White" FontSize="20" Width="350" Height="50">
+                    <Button.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="15"></Setter>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+        </StackPanel>
+        <StackPanel Grid.Column="1" x:Name="SdelnoProgress" Visibility="Hidden">
+            <TextBlock/>
+            <TextBlock Text="Изготовлено за месяц" FontSize="20" TextAlignment="Center"></TextBlock>
+            <TextBlock></TextBlock>
+            <TextBox x:Name="all" Width="350" Height="50" FontSize="20"></TextBox>
+            <TextBlock/>
+            <Button Click="btn_SdelnoProgress_Click" Background="Green" Height="50" Width="350" Content="Рассчитать з/п" FontSize="20" FontWeight="Bold" Foreground="White">
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="15"></Setter>
+                    </Style>
+                </Button.Resources>
+            </Button>
+        </StackPanel>
+        <StackPanel Grid.Column="1" x:Name="cos" Visibility="Hidden">
+            <TextBlock/>
+            <TextBlock TextAlignment="Center" FontSize="20">Процент от зп</TextBlock>
+            <TextBlock/>
+            <TextBox x:Name="proz" Width="350" Height="50"></TextBox>
+            <TextBlock/>
+            <TextBlock TextAlignment="Center" FontSize="20">Зп за месяц</TextBlock>
+            <TextBlock/>
+            <TextBox x:Name="zarabotok" Width="350" Height="50"></TextBox>
+            <TextBlock/>
+            <Button FontWeight="Bold" Foreground="White" Background="Green" Content="Рассчитать з/п" Click="btn_Cosvennaya_Click" Height="50" Width="350" FontSize="20">
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="15"></Setter>
+                    </Style>
+                </Button.Resources>
+            </Button>
+        </StackPanel>
+        <StackPanel Grid.Column="1" x:Name="Simple" Visibility="Hidden">
+            <TextBlock/>
+            <TextBlock FontSize="20" Text="Сдельная расценка" FontWeight="Bold" TextAlignment="Center"></TextBlock>
+            <TextBlock/>
+            <TextBlock FontSize="20" TextAlignment="Center">Часовая(дневная) ставка</TextBlock>
+            <TextBlock/>
+            <TextBox x:Name="hourStavka" FontSize="20" Width="350" Height="50"></TextBox>
+            <TextBlock/>
+            <TextBlock FontSize="20" TextAlignment="Center">Часовая(дневная)норма выработки</TextBlock>
+            <TextBlock/>
+            <TextBox x:Name="formaVirobotky" FontSize="20" Width="350" Height="50"></TextBox>
+            <TextBlock/>
+            <TextBlock FontSize="20" TextAlignment="Center">Сколько изготовил за месяц</TextBlock>
+            <TextBlock/>
+            <TextBox x:Name="VsegoIzgotovil" FontSize="20" Width="350" Height="50"></TextBox>
+            <TextBlock/>
+            <Button Background="Green" Foreground="White" FontWeight="Bold" Content="Рассчитать з/п" Click="btn_Simple_Click" FontSize="20" Height="50" Width="350">
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="15"></Setter>
+                    </Style>
+                </Button.Resources>
+            </Button>
+        </StackPanel>
     </Grid>
 </Window>

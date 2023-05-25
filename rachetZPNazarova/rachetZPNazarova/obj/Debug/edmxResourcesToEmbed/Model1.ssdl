@@ -15,9 +15,9 @@
       <PropertyRef Name="IDStaff" />
     </Key>
     <Property Name="IDStaff" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="NameStaff" Type="nvarchar" MaxLength="50" />
     <Property Name="SurnameStaff" Type="nvarchar" MaxLength="50" />
-    <Property Name="CardNumber" Type="int" />
+    <Property Name="NameStaff" Type="nvarchar" MaxLength="50" />
+    <Property Name="CardNumber" Type="nvarchar" MaxLength="50" />
   </EntityType>
   <EntityType Name="sysdiagrams">
     <Key>

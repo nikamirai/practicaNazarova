@@ -16,8 +16,8 @@
       <EntityTypeMapping TypeName="ZPPrakticaModel.Staff">
         <MappingFragment StoreEntitySet="Staff">
           <ScalarProperty Name="IDStaff" ColumnName="IDStaff" />
-          <ScalarProperty Name="NameStaff" ColumnName="NameStaff" />
           <ScalarProperty Name="SurnameStaff" ColumnName="SurnameStaff" />
+          <ScalarProperty Name="NameStaff" ColumnName="NameStaff" />
           <ScalarProperty Name="CardNumber" ColumnName="CardNumber" />
         </MappingFragment>
       </EntityTypeMapping>

@@ -20,9 +20,9 @@
             <PropertyRef Name="IDStaff" />
           </Key>
           <Property Name="IDStaff" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="NameStaff" Type="nvarchar" MaxLength="50" />
           <Property Name="SurnameStaff" Type="nvarchar" MaxLength="50" />
-          <Property Name="CardNumber" Type="int" />
+          <Property Name="NameStaff" Type="nvarchar" MaxLength="50" />
+          <Property Name="CardNumber" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="sysdiagrams">
           <Key>
@@ -129,9 +129,9 @@
             <PropertyRef Name="IDStaff" />
           </Key>
           <Property Name="IDStaff" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="NameStaff" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="SurnameStaff" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="CardNumber" Type="Int32" />
+          <Property Name="NameStaff" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CardNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="PointStaff" Relationship="Self.FK_PointStaff_Staff" FromRole="Staff" ToRole="PointStaff" />
         </EntityType>
         <EntityType Name="sysdiagrams">
@@ -239,8 +239,8 @@
             <EntityTypeMapping TypeName="ZPPrakticaModel.Staff">
               <MappingFragment StoreEntitySet="Staff">
                 <ScalarProperty Name="IDStaff" ColumnName="IDStaff" />
-                <ScalarProperty Name="NameStaff" ColumnName="NameStaff" />
                 <ScalarProperty Name="SurnameStaff" ColumnName="SurnameStaff" />
+                <ScalarProperty Name="NameStaff" ColumnName="NameStaff" />
                 <ScalarProperty Name="CardNumber" ColumnName="CardNumber" />
               </MappingFragment>
             </EntityTypeMapping>
