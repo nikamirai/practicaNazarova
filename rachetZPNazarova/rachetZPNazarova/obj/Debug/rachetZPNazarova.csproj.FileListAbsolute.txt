@@ -22,5 +22,5 @@ C:\Users\user\practicaNazarova\rachetZPNazarova\rachetZPNazarova\obj\Debug\rache
 C:\Users\user\practicaNazarova\rachetZPNazarova\rachetZPNazarova\obj\Debug\rachetZPNazarova.csproj.CopyComplete
 C:\Users\user\practicaNazarova\rachetZPNazarova\rachetZPNazarova\obj\Debug\rachetZPNazarova.exe
 C:\Users\user\practicaNazarova\rachetZPNazarova\rachetZPNazarova\obj\Debug\rachetZPNazarova.pdb
-C:\Users\user\practicaNazarova\rachetZPNazarova\rachetZPNazarova\obj\Debug\Bukxalter.g.cs
-C:\Users\user\practicaNazarova\rachetZPNazarova\rachetZPNazarova\obj\Debug\Bukxalter.baml
+C:\Users\user\practicaNazarova\rachetZPNazarova\rachetZPNazarova\obj\Debug\Buxgalter.g.cs
+C:\Users\user\practicaNazarova\rachetZPNazarova\rachetZPNazarova\obj\Debug\Buxgalter.baml

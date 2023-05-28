@@ -27,17 +27,30 @@ namespace rachetZPNazarova
             cbForma.ItemsSource = zP.TypePoint.ToList();
         }
 
+        ZPPrakticaEntities ZP = new ZPPrakticaEntities();
+
         private void btn_SdelnoPremial_Click(object sender, RoutedEventArgs e)
         {
             if (premia.Text != "")
             {
                 double rez = Convert.ToInt32(sdelnayaRaschenka.Text) * Convert.ToInt32(all_za_Month.Text);
                 double zp2 = rez + Convert.ToInt32(premia.Text);
+                var idst = ZP.Staff.Where(w => w.SurnameStaff == cb.Text).FirstOrDefault();
+                var idtype = ZP.TypePoint.Where(w => w.Description == cbForma.Text).FirstOrDefault();
+                var staf = new PointStaff { idStaff = idst.IDStaff, idTypePoint = idtype.IDTypePoint, SummaPoint = zp2, idUserSystem = 1 };
+                _ = ZP.PointStaff.Add(staf);
+                _ = ZP.SaveChanges();
                 _ = MessageBox.Show("Заработная плата работника с учетом премии равна:" + " " + zp2);
+
             }
             else
             {
                 double res = Convert.ToInt32(sdelnayaRaschenka.Text) * Convert.ToInt32(all_za_Month.Text);
+                var idst = ZP.Staff.Where(w => w.SurnameStaff == cb.Text).FirstOrDefault();
+                var idtype = ZP.TypePoint.Where(w => w.Description == cbForma.Text).FirstOrDefault();
+                var staf = new PointStaff { idStaff = idst.IDStaff, idTypePoint = idtype.IDTypePoint, SummaPoint = res, idUserSystem = 1 };
+                _ = ZP.PointStaff.Add(staf);
+                _ = ZP.SaveChanges();
                 _ = MessageBox.Show("Заработная плата работника без премии" + " " + res);
             }
         }
@@ -47,12 +60,22 @@ namespace rachetZPNazarova
             if (Convert.ToInt32(all.Text) <= 110)
             {
                 double prog = Convert.ToInt32(all.Text) * 80;
+                var idst = ZP.Staff.Where(w => w.SurnameStaff == cb.Text).FirstOrDefault();
+                var idtype = ZP.TypePoint.Where(w => w.Description == cbForma.Text).FirstOrDefault();
+                var staf = new PointStaff { idStaff = idst.IDStaff, idTypePoint = idtype.IDTypePoint, SummaPoint = prog, idUserSystem = 1 };
+                _ = ZP.PointStaff.Add(staf);
+                _ = ZP.SaveChanges();
                 MessageBox.Show("Заработная плата равна " + prog);
             }
             else
             {
                 double prog2 = Convert.ToInt32(all.Text) - 110;
                 double rez3 = (110 * 80) + Convert.ToInt32(prog2) * 85;
+                var idst = ZP.Staff.Where(w => w.SurnameStaff == cb.Text).FirstOrDefault();
+                var idtype = ZP.TypePoint.Where(w => w.Description == cbForma.Text).FirstOrDefault();
+                var staf = new PointStaff { idStaff = idst.IDStaff, idTypePoint = idtype.IDTypePoint, SummaPoint = rez3, idUserSystem = 1 };
+                _ = ZP.PointStaff.Add(staf);
+                _ = ZP.SaveChanges();
                 MessageBox.Show("Зп равна " + rez3);
             }
         }
@@ -61,6 +84,13 @@ namespace rachetZPNazarova
         {
             double zarab = Convert.ToInt32(zarabotok.Text) / 100;
             double zp4 = zarab * Convert.ToInt32(proz.Text);
+
+            var idst = ZP.Staff.Where(w => w.SurnameStaff == cb.Text).FirstOrDefault();
+            var idtype = ZP.TypePoint.Where(w => w.Description == cbForma.Text).FirstOrDefault();
+            var staf = new PointStaff { idStaff = idst.IDStaff, idTypePoint = idtype.IDTypePoint, SummaPoint = zp4, idUserSystem = 1 };
+            _ = ZP.PointStaff.Add(staf);
+            _ = ZP.SaveChanges();
+
             MessageBox.Show("Заработная плата " + zp4);
         }
 
@@ -69,6 +99,13 @@ namespace rachetZPNazarova
             double stavka = Convert.ToInt32(hourStavka.Text) / Convert.ToInt32(formaVirobotky.Text);
             MessageBox.Show("Сдельная расценка за одно изделие" + stavka);
             double zp = stavka * Convert.ToInt32(VsegoIzgotovil.Text);
+
+            var idst = ZP.Staff.Where(w => w.SurnameStaff == cb.Text).FirstOrDefault();
+            var idtype = ZP.TypePoint.Where(w => w.Description == cbForma.Text).FirstOrDefault();
+            var staf = new PointStaff { idStaff = idst.IDStaff, idTypePoint = idtype.IDTypePoint, SummaPoint = zp, idUserSystem = 1 };
+            _ = ZP.PointStaff.Add(staf);
+            _ = ZP.SaveChanges();
+
             MessageBox.Show("Зп" + " " + zp);
         }
 
