@@ -41,6 +41,14 @@
     <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <NavigationProperty Name="PointStaff" Relationship="Self.FK_PointStaff_TypePoint" FromRole="TypePoint" ToRole="PointStaff" />
   </EntityType>
+  <EntityType Name="TypeUser">
+    <Key>
+      <PropertyRef Name="IDTypeUser" />
+    </Key>
+    <Property Name="IDTypeUser" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NameTypeUser" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="UserSystem" Relationship="Self.FK_UserSystem_TypeUser" FromRole="TypeUser" ToRole="UserSystem" />
+  </EntityType>
   <EntityType Name="UserSystem">
     <Key>
       <PropertyRef Name="IDUser" />
@@ -50,7 +58,9 @@
     <Property Name="SurnameUser" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="Login" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="IDTypeUser" Type="Int32" />
     <NavigationProperty Name="PointStaff" Relationship="Self.FK_PointStaff_UserSystem" FromRole="UserSystem" ToRole="PointStaff" />
+    <NavigationProperty Name="TypeUser" Relationship="Self.FK_UserSystem_TypeUser" FromRole="UserSystem" ToRole="TypeUser" />
   </EntityType>
   <Association Name="FK_PointStaff_Staff">
     <End Role="Staff" Type="Self.Staff" Multiplicity="0..1" />
@@ -88,11 +98,24 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="FK_UserSystem_TypeUser">
+    <End Role="TypeUser" Type="Self.TypeUser" Multiplicity="0..1" />
+    <End Role="UserSystem" Type="Self.UserSystem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TypeUser">
+        <PropertyRef Name="IDTypeUser" />
+      </Principal>
+      <Dependent Role="UserSystem">
+        <PropertyRef Name="IDTypeUser" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <EntityContainer Name="ZPPrakticaEntities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="PointStaff" EntityType="Self.PointStaff" />
     <EntitySet Name="Staff" EntityType="Self.Staff" />
     <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
     <EntitySet Name="TypePoint" EntityType="Self.TypePoint" />
+    <EntitySet Name="TypeUser" EntityType="Self.TypeUser" />
     <EntitySet Name="UserSystem" EntityType="Self.UserSystem" />
     <AssociationSet Name="FK_PointStaff_Staff" Association="Self.FK_PointStaff_Staff">
       <End Role="Staff" EntitySet="Staff" />
@@ -105,6 +128,10 @@
     <AssociationSet Name="FK_PointStaff_UserSystem" Association="Self.FK_PointStaff_UserSystem">
       <End Role="UserSystem" EntitySet="UserSystem" />
       <End Role="PointStaff" EntitySet="PointStaff" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserSystem_TypeUser" Association="Self.FK_UserSystem_TypeUser">
+      <End Role="TypeUser" EntitySet="TypeUser" />
+      <End Role="UserSystem" EntitySet="UserSystem" />
     </AssociationSet>
   </EntityContainer>
 </Schema>

@@ -36,6 +36,13 @@
     <Property Name="IDTypePoint" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Description" Type="nvarchar(max)" />
   </EntityType>
+  <EntityType Name="TypeUser">
+    <Key>
+      <PropertyRef Name="IDTypeUser" />
+    </Key>
+    <Property Name="IDTypeUser" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NameTypeUser" Type="nvarchar" MaxLength="50" />
+  </EntityType>
   <EntityType Name="UserSystem">
     <Key>
       <PropertyRef Name="IDUser" />
@@ -45,6 +52,7 @@
     <Property Name="SurnameUser" Type="nvarchar" MaxLength="50" />
     <Property Name="Login" Type="nvarchar" MaxLength="50" />
     <Property Name="Password" Type="nvarchar" MaxLength="50" />
+    <Property Name="IDTypeUser" Type="int" />
   </EntityType>
   <Association Name="FK_PointStaff_Staff">
     <End Role="Staff" Type="Self.Staff" Multiplicity="0..1" />
@@ -82,11 +90,24 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="FK_UserSystem_TypeUser">
+    <End Role="TypeUser" Type="Self.TypeUser" Multiplicity="0..1" />
+    <End Role="UserSystem" Type="Self.UserSystem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TypeUser">
+        <PropertyRef Name="IDTypeUser" />
+      </Principal>
+      <Dependent Role="UserSystem">
+        <PropertyRef Name="IDTypeUser" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <EntityContainer Name="Хранилище ZPPrakticaModelContainer">
     <EntitySet Name="PointStaff" EntityType="Self.PointStaff" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Staff" EntityType="Self.Staff" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TypePoint" EntityType="Self.TypePoint" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TypeUser" EntityType="Self.TypeUser" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="UserSystem" EntityType="Self.UserSystem" Schema="dbo" store:Type="Tables" />
     <AssociationSet Name="FK_PointStaff_Staff" Association="Self.FK_PointStaff_Staff">
       <End Role="Staff" EntitySet="Staff" />
@@ -99,6 +120,10 @@
     <AssociationSet Name="FK_PointStaff_UserSystem" Association="Self.FK_PointStaff_UserSystem">
       <End Role="UserSystem" EntitySet="UserSystem" />
       <End Role="PointStaff" EntitySet="PointStaff" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserSystem_TypeUser" Association="Self.FK_UserSystem_TypeUser">
+      <End Role="TypeUser" EntitySet="TypeUser" />
+      <End Role="UserSystem" EntitySet="UserSystem" />
     </AssociationSet>
   </EntityContainer>
 </Schema>

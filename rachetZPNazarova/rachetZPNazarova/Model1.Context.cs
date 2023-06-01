@@ -26,7 +26,6 @@ namespace rachetZPNazarova
                 _context = new ZPPrakticaEntities();
             return _context;
         }
-
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             throw new UnintentionalCodeFirstException();
@@ -36,6 +35,7 @@ namespace rachetZPNazarova
         public virtual DbSet<Staff> Staff { get; set; }
         public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
         public virtual DbSet<TypePoint> TypePoint { get; set; }
+        public virtual DbSet<TypeUser> TypeUser { get; set; }
         public virtual DbSet<UserSystem> UserSystem { get; set; }
     }
 }

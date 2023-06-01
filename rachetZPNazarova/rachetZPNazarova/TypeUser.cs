@@ -12,23 +12,18 @@ namespace rachetZPNazarova
     using System;
     using System.Collections.Generic;
     
-    public partial class UserSystem
+    public partial class TypeUser
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public UserSystem()
+        public TypeUser()
         {
-            this.PointStaff = new HashSet<PointStaff>();
+            this.UserSystem = new HashSet<UserSystem>();
         }
     
-        public int IDUser { get; set; }
-        public string NameUser { get; set; }
-        public string SurnameUser { get; set; }
-        public string Login { get; set; }
-        public string Password { get; set; }
-        public Nullable<int> IDTypeUser { get; set; }
+        public int IDTypeUser { get; set; }
+        public string NameTypeUser { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<PointStaff> PointStaff { get; set; }
-        public virtual TypeUser TypeUser { get; set; }
+        public virtual ICollection<UserSystem> UserSystem { get; set; }
     }
 }

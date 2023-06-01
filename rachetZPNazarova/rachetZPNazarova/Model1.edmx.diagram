@@ -4,15 +4,17 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="6a3145dafa9a4750b46a4c2c6dde6edf" Name="Diagram1">
-        <EntityTypeShape EntityType="ZPPrakticaModel.PointStaff" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
-        <EntityTypeShape EntityType="ZPPrakticaModel.Staff" Width="1.5" PointX="0.75" PointY="1.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="ZPPrakticaModel.sysdiagrams" Width="1.5" PointX="2.75" PointY="4.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="ZPPrakticaModel.TypePoint" Width="1.5" PointX="0.75" PointY="4.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="ZPPrakticaModel.UserSystem" Width="1.5" PointX="0.75" PointY="6.875" IsExpanded="true" />
+      <Diagram DiagramId="7289a6b8f07349459bd9c5daf1f74953" Name="Diagram1">
+        <EntityTypeShape EntityType="ZPPrakticaModel.PointStaff" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="ZPPrakticaModel.Staff" Width="1.5" PointX="3" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ZPPrakticaModel.sysdiagrams" Width="1.5" PointX="5.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ZPPrakticaModel.TypePoint" Width="1.5" PointX="3" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ZPPrakticaModel.TypeUser" Width="1.5" PointX="0.75" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ZPPrakticaModel.UserSystem" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
         <AssociationConnector Association="ZPPrakticaModel.FK_PointStaff_Staff" ManuallyRouted="false" />
         <AssociationConnector Association="ZPPrakticaModel.FK_PointStaff_TypePoint" ManuallyRouted="false" />
         <AssociationConnector Association="ZPPrakticaModel.FK_PointStaff_UserSystem" ManuallyRouted="false" />
+        <AssociationConnector Association="ZPPrakticaModel.FK_UserSystem_TypeUser" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

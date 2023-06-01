@@ -41,6 +41,14 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="TypeUser">
+      <EntityTypeMapping TypeName="ZPPrakticaModel.TypeUser">
+        <MappingFragment StoreEntitySet="TypeUser">
+          <ScalarProperty Name="IDTypeUser" ColumnName="IDTypeUser" />
+          <ScalarProperty Name="NameTypeUser" ColumnName="NameTypeUser" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="UserSystem">
       <EntityTypeMapping TypeName="ZPPrakticaModel.UserSystem">
         <MappingFragment StoreEntitySet="UserSystem">
@@ -49,6 +57,7 @@
           <ScalarProperty Name="SurnameUser" ColumnName="SurnameUser" />
           <ScalarProperty Name="Login" ColumnName="Login" />
           <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="IDTypeUser" ColumnName="IDTypeUser" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

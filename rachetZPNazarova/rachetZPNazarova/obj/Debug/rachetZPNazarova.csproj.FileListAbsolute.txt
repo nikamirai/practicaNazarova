@@ -24,3 +24,5 @@ C:\Users\user\practicaNazarova\rachetZPNazarova\rachetZPNazarova\obj\Debug\rache
 C:\Users\user\practicaNazarova\rachetZPNazarova\rachetZPNazarova\obj\Debug\rachetZPNazarova.pdb
 C:\Users\user\practicaNazarova\rachetZPNazarova\rachetZPNazarova\obj\Debug\Buxgalter.g.cs
 C:\Users\user\practicaNazarova\rachetZPNazarova\rachetZPNazarova\obj\Debug\Buxgalter.baml
+C:\Users\user\practicaNazarova\rachetZPNazarova\rachetZPNazarova\obj\Debug\AdminPage.g.cs
+C:\Users\user\practicaNazarova\rachetZPNazarova\rachetZPNazarova\obj\Debug\AdminPage.baml
