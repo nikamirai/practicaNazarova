@@ -22,6 +22,8 @@ namespace rachetZPNazarova
         public AdminPage()
         {
             InitializeComponent();
+            DGSotr.ItemsSource = ZPPrakticaEntities.GetContext().Staff.ToList();
+            DGUser.ItemsSource = ZPPrakticaEntities.GetContext().UserSystem.ToList();
         }
     }
 }
