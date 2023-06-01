@@ -28,17 +28,27 @@ namespace rachetZPNazarova
         private void btn_EnterToSystem_Click(object sender, RoutedEventArgs e)
         {
             ZPPrakticaEntities zp = new ZPPrakticaEntities();
-            var user = zp.UserSystem.Where(w=>w.Login == tbLogin.Text && w.Password == tbPassword.Text).FirstOrDefault();
+            UserSystem user = zp.UserSystem.Where(w => w.Login == tbLogin.Text && w.Password == tbPassword.Text).FirstOrDefault();
             if (user == null)
             {
-                MessageBox.Show("Что-то введено неверно");
+                _ = MessageBox.Show("Что-то введено неверно");
             }
             else
             {
-                MessageBox.Show("Вы авторизованы");
-                Bukxalter bukxalter = new Bukxalter();
-                bukxalter.Show();
-                return;
+                if (user.IDTypeUser == 1)
+                {
+                    _ = MessageBox.Show("Вы авторизованы");
+                    AdminPage adminPage = new AdminPage();
+                    adminPage.Show();
+                    return;
+                }
+                else if (user.IDTypeUser == 2)
+                {
+                    _ = MessageBox.Show("Вы авторизованы");
+                    Bukxalter bukxalter = new Bukxalter();
+                    bukxalter.Show();
+                    return;
+                }
             }
         }
 
