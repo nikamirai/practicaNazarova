@@ -29,7 +29,7 @@ namespace rachetZPNazarova
             if (tbPassword.Text == tbReturnPassword.Text)
             {
                 ZPPrakticaEntities zP = new ZPPrakticaEntities();
-                UserSystem userSystem = new UserSystem { NameUser = tbName.Text, SurnameUser = tbSurname.Text, Login = tbLogin.Text, Password = tbPassword.Text};
+                UserSystem userSystem = new UserSystem { NameUser = tbName.Text, SurnameUser = tbSurname.Text, Login = tbLogin.Text, Password = tbPassword.Text, IDTypeUser = 2};
                 _ = zP.UserSystem.Add(userSystem);
                 _ = zP.SaveChanges();
                 MessageBox.Show("Вы зарегистрированы");
