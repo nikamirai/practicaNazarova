@@ -26,3 +26,7 @@ C:\Users\user\practicaNazarova\rachetZPNazarova\rachetZPNazarova\obj\Debug\Buxga
 C:\Users\user\practicaNazarova\rachetZPNazarova\rachetZPNazarova\obj\Debug\Buxgalter.baml
 C:\Users\user\practicaNazarova\rachetZPNazarova\rachetZPNazarova\obj\Debug\AdminPage.g.cs
 C:\Users\user\practicaNazarova\rachetZPNazarova\rachetZPNazarova\obj\Debug\AdminPage.baml
+C:\Users\user\practicaNazarova\rachetZPNazarova\rachetZPNazarova\obj\Debug\AddEditPageUser.g.cs
+C:\Users\user\practicaNazarova\rachetZPNazarova\rachetZPNazarova\obj\Debug\AddEditPageUser.baml
+C:\Users\user\practicaNazarova\rachetZPNazarova\rachetZPNazarova\obj\Debug\AddEditPageSotr.g.cs
+C:\Users\user\practicaNazarova\rachetZPNazarova\rachetZPNazarova\obj\Debug\AddEditPageSotr.baml

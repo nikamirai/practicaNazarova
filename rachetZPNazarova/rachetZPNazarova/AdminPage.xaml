@@ -38,7 +38,7 @@
                     <DataGridTemplateColumn Header="Редакт.">
                         <DataGridTemplateColumn.CellTemplate>
                             <DataTemplate>
-                                <Button Content="Редакт.">
+                                <Button Content="Редакт." Click="btn_Edit_User_Information_Click">
                                     <Button.Resources>
                                         <Style TargetType="Border">
                                             <Setter Property="CornerRadius" Value="5"></Setter>
@@ -50,14 +50,14 @@
                     </DataGridTemplateColumn>
                 </DataGrid.Columns>
             </DataGrid>
-            <Button Grid.Row="2" Width="120" Height="35" FontSize="20" HorizontalAlignment="Left" Content="Удалить" Margin="10 0 0 0" Background="OrangeRed" FontWeight="Bold">
+            <Button Click="btn_Delete_User_Click" Grid.Row="2" Width="120" Height="35" FontSize="20" HorizontalAlignment="Left" Content="Удалить" Margin="14,7.2,0,7.4" Background="OrangeRed" FontWeight="Bold">
                 <Button.Resources>
                     <Style TargetType="Border">
                         <Setter Property="CornerRadius" Value="5"></Setter>
                     </Style>
                 </Button.Resources>
             </Button>
-            <Button Grid.Row="2" Width="120" Height="35" FontSize="20" HorizontalAlignment="Right" Content="Добавить" Margin="0 0 0 0" Background="Green" FontWeight="Bold">
+            <Button Grid.Row="2" Width="120" Height="35" FontSize="20" HorizontalAlignment="Right" Content="Добавить" Margin="0 0 0 0" Background="Green" FontWeight="Bold" Click="btn_Add_New_User_Click">
                 <Button.Resources>
                     <Style TargetType="Border">
                         <Setter Property="CornerRadius" Value="5"></Setter>
@@ -81,7 +81,7 @@
                     <DataGridTemplateColumn Header="Редакт." Width="*">
                         <DataGridTemplateColumn.CellTemplate>
                             <DataTemplate>
-                                <Button Content="Редакт.">
+                                <Button Content="Редакт." Click="btn_Edit_Sotr_Information_Click">
                                     <Button.Resources>
                                         <Style TargetType="Border">
                                             <Setter Property="CornerRadius" Value="5"></Setter>
@@ -93,14 +93,14 @@
                     </DataGridTemplateColumn>
                 </DataGrid.Columns>
             </DataGrid>
-            <Button Grid.Row="2" Width="120" Height="35" FontSize="20" HorizontalAlignment="Left" Content="Удалить" Margin="0 0 0 0" Background="OrangeRed" FontWeight="Bold">
+            <Button Click="btn_Delete_Sotr_Click" Grid.Row="2" Width="120" Height="35" FontSize="20" HorizontalAlignment="Left" Content="Удалить" Margin="0 0 0 0" Background="OrangeRed" FontWeight="Bold">
                 <Button.Resources>
                     <Style TargetType="Border">
                         <Setter Property="CornerRadius" Value="5"></Setter>
                     </Style>
                 </Button.Resources>
             </Button>
-            <Button Grid.Row="2" Width="120" Height="35" FontSize="20" HorizontalAlignment="Right" Content="Добавить" Margin="0 0 10 0" Background="Green" FontWeight="Bold">
+            <Button Grid.Row="2" Width="120" Height="35" FontSize="20" HorizontalAlignment="Right" Content="Добавить" Margin="0 0 10 0" Background="Green" FontWeight="Bold" Click="btn_Add_New_Sotr_Click">
                 <Button.Resources>
                     <Style TargetType="Border">
                         <Setter Property="CornerRadius" Value="5"></Setter>
