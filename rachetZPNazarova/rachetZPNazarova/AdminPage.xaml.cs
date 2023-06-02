@@ -36,7 +36,10 @@ namespace rachetZPNazarova
 
         private void btn_Edit_Sotr_Information_Click(object sender, RoutedEventArgs e)
         {
-
+            AddEditPageSotr addEdit = new AddEditPageSotr((sender as Button).DataContext as Staff);
+            Close();
+            addEdit.Show();
+            return;
         }
 
         private void btn_Add_New_User_Click(object sender, RoutedEventArgs e)
@@ -45,6 +48,32 @@ namespace rachetZPNazarova
             Close();
             addEdit.Show();
             return;
+        }
+
+        private void btn_Add_New_Sotr_Click(object sender, RoutedEventArgs e)
+        {
+            AddEditPageSotr addEdit = new AddEditPageSotr((sender as Button).DataContext as Staff);
+            Close();
+            addEdit.Show();
+            return;
+        }
+
+        private void btn_Delete_User_Click(object sender, RoutedEventArgs e)
+        {
+            var productForRemoving = DGUser.SelectedItems.Cast<UserSystem>().ToList();
+            ZPPrakticaEntities.GetContext().UserSystem.RemoveRange(productForRemoving);
+            ZPPrakticaEntities.GetContext().SaveChanges();
+            MessageBox.Show("Данные удалены");
+            DGUser.ItemsSource = ZPPrakticaEntities.GetContext().UserSystem.ToList();
+        }
+
+        private void btn_Delete_Sotr_Click(object sender, RoutedEventArgs e)
+        {
+            var productForRemoving = DGSotr.SelectedItems.Cast<Staff>().ToList();
+            ZPPrakticaEntities.GetContext().Staff.RemoveRange(productForRemoving);
+            ZPPrakticaEntities.GetContext().SaveChanges();
+            MessageBox.Show("Данные удалены");
+            DGSotr.ItemsSource = ZPPrakticaEntities.GetContext().Staff.ToList();
         }
     }
 }
