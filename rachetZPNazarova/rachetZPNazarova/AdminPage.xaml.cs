@@ -25,5 +25,26 @@ namespace rachetZPNazarova
             DGSotr.ItemsSource = ZPPrakticaEntities.GetContext().Staff.ToList();
             DGUser.ItemsSource = ZPPrakticaEntities.GetContext().UserSystem.ToList();
         }
+
+        private void btn_Edit_User_Information_Click(object sender, RoutedEventArgs e)
+        {
+            AddEditPageUser addEdit = new AddEditPageUser((sender as Button).DataContext as UserSystem);
+            Close();
+            addEdit.Show();
+            return;
+        }
+
+        private void btn_Edit_Sotr_Information_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btn_Add_New_User_Click(object sender, RoutedEventArgs e)
+        {
+            AddEditPageUser addEdit = new AddEditPageUser((sender as Button).DataContext as UserSystem);
+            Close();
+            addEdit.Show();
+            return;
+        }
     }
 }
