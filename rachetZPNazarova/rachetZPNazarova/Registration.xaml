@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:rachetZPNazarova"
         mc:Ignorable="d"
-        Title="Registration" Height="700" Width="500" Background="#444146">
+        Title="Registration" Height="700" Width="500">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
@@ -26,27 +26,33 @@
             <RowDefinition/>
             <RowDefinition Height="50"/>
         </Grid.RowDefinitions>
-        <TextBlock Foreground="LightGreen" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="25" Text="Введите фамилию"></TextBlock>
+        <Grid Grid.Row="0" Grid.ColumnSpan="3">
+            <Image Source="Resourse/fon.png" Stretch="UniformToFill"></Image>
+        </Grid>
+        <TextBlock Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="25" Text="Введите фамилию"></TextBlock>
         <TextBox x:Name="tbSurname" Grid.Row="2" Width="300" Height="50" TextAlignment="Center" FontSize="25"></TextBox>
 
-        <TextBlock Foreground="LightGreen" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="25" Text="Введите имя"></TextBlock>
+        <TextBlock Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="25" Text="Введите имя"></TextBlock>
         <TextBox x:Name="tbName" Grid.Row="4" Width="300" Height="50" TextAlignment="Center" FontSize="25"></TextBox>
 
-        <TextBlock Foreground="LightGreen" Grid.Row="5" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="25" Text="Введите логин"></TextBlock>
+        <TextBlock Grid.Row="5" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="25" Text="Введите логин"></TextBlock>
         <TextBox x:Name="tbLogin" Grid.Row="6" Width="300" Height="50" TextAlignment="Center" FontSize="25"></TextBox>
 
-        <TextBlock Foreground="LightGreen" Grid.Row="7" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="25" Text="Введите пароль"></TextBlock>
+        <TextBlock Grid.Row="7" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="25" Text="Введите пароль"></TextBlock>
         <TextBox x:Name="tbPassword" Grid.Row="8" Width="300" Height="50" TextAlignment="Center" FontSize="25"></TextBox>
 
-        <TextBlock Foreground="LightGreen" Grid.Row="9" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="25" Text="Введите повторно пароль"></TextBlock>
+        <TextBlock Grid.Row="9" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="25" Text="Введите повторно пароль"></TextBlock>
         <TextBox x:Name="tbReturnPassword" Grid.Row="10" Width="300" Height="50" TextAlignment="Center" FontSize="25"></TextBox>
 
-        <Button Click="btn_Registration_Click" Background="LightGreen" Foreground="Black" FontWeight="Bold" Grid.Row="12" Content="Зарегистрироваться" FontSize="25" Width="300" Height="40">
+        <Button Click="btn_Registration_Click" Background="Green" Foreground="Black" FontWeight="Bold" Grid.Row="11" Content="Зарегистрироваться" FontSize="25" Width="300" Height="40">
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="10"></Setter>
                 </Style>
             </Button.Resources>
         </Button>
+        <Grid Grid.Row="13" Grid.ColumnSpan="3">
+            <Image Source="Resourse/fon.png" Stretch="UniformToFill"></Image>
+        </Grid>
     </Grid>
 </Window>
